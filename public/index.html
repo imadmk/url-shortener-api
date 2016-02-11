@@ -1,39 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
 
-<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The URL Shortener</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
 
-	<head>
-		<title>Clementine.js - The elegant and lightweight full stack JavaScript boilerplate.</title>
+<body>
+  <div class="container">
+    <h1 class="header">
+      URL Shortener
+    </h1>
+    <blockquote>
+      User stories:
+      <ul><li>I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</ul>
+      <ul><li>When I visit that shortened URL, it will redirect me to my original link.</ul>
+    </blockquote>
+    <h3>Example creation usage:</h3>
+    <code><a href="https://shurli.herokuapp.com/new/https://www.google.com">https://url-shortener-imadmk.herokuapp.com/new/https://www.google.com</a></code>
+    <br>
+    <code><a href="https://shurli.herokuapp.com/new/http://freecodecamp.com/news">https://url-shortener-imadmk.herokuapp.com/new/http://freecodecamp.com/news</a></code>
+
+    <h3>Example creation output:</h3>
+    <code>
+      {
+        "original_url": "http://freecodecamp.com/news",
+        "short_url": "https://url-shortener-imadmk.herokuapp.com/4"
+      }
+    </code>
+    <h3>Usage:</h3>
+    <code><a href="https://shurli.herokuapp.com/4">https://url-shortener-imadmk.herokuapp.com/4</a></code>
 		
-		<link href="/public/css/main.css" rel="stylesheet" type="text/css">
-	</head>
+		<p>I know this is looks longer, but all you need is a short domain like bit.ly</p>
 
-	<header>
-		<p>Welcome, <span id="display-name"></span>!</p>
-		<a class="menu" href="/profile">Profile</a>
-		<p>|</p>
-		<a class="menu" href="/logout">Logout</a>
-	</header>
-
-	<body>
-		<div class="container">
-			<img src="/public/img/clementine_150.png" />
-			<br />
-			<p class="clementine-text">Clementine.js</p>
-		</div>
-	
-		<div class="container">
-			<p>You have clicked the button <span id="click-nbr"></span> times.</p>
-			<br />
-			<div class="btn-container">
-				<button type="submit" class="btn btn-add">CLICK ME!</button>
-				<button class="btn btn-delete">RESET</button>
-			</div>
-		</div>
-		
-		<script type="text/javascript" src="common/ajax-functions.js"></script>
-		<script type="text/javascript" src="controllers/clickController.client.js"></script>
-		<script type="text/javascript" src="controllers/userController.client.js"></script>
-	</body>
+    <h3>Will redirect to:</h3>
+    <code><a href="http://freecodecamp.com/news">http://freecodecamp.com/news</a></code>
+  </div>
+</body>
 
 </html>
